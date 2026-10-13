@@ -3,160 +3,357 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>에피팩스3 | 인테리어 시공</title>
-<meta name="description" content="복잡한 인테리어, 상담부터 시공까지 저희가 해결해드립니다.">
+<title>에피팩스3 | 인테리어 커뮤니티</title>
+<meta name="description" content="고객과 인테리어 사장님이 사진으로 함께 만드는 인테리어 커뮤니티. 상담부터 시공까지 에피팩스3가 해결합니다.">
+<meta property="og:title" content="에피팩스3 | 인테리어 커뮤니티">
+<meta property="og:description" content="고객과 인테리어 사장님이 사진으로 함께 만드는 공간. 상담부터 시공까지.">
+<meta property="og:image" content="img/01_living.jpg">
+<meta name="theme-color" content="#35c5f0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2335c5f0'/%3E%3Cpath d='M8 23V12l8-5 8 5v11h-5v-7h-6v7z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
-:root{--red:#c8102e;--red-d:#9d0c24;--ink:#222;--mute:#767676;--soft:#f5f3f3;--line:#eaeaea}
+:root{--blue:#35c5f0;--blue-d:#0aa5d8;--link:#00a1ff;--ink:#2f3438;--txt:#424242;--mute:#828c94;--line:#eaedef;--bg2:#f7f9fa;--c:1256px}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{margin:0;font-family:"Pretendard","Malgun Gothic","맑은 고딕",system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;font-size:17px}
-a{color:inherit}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:10}
-header .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
-.logo{font-weight:800;font-size:22px;color:var(--red);text-decoration:none}
-nav a{margin-left:20px;text-decoration:none;font-weight:600;font-size:16px}
-nav a:hover{color:var(--red)}
-.btn{display:inline-block;background:var(--red);color:#fff;padding:14px 28px;border-radius:999px;text-decoration:none;font-weight:700;border:0;font-size:17px;cursor:pointer;font-family:inherit}
-.btn:hover{background:var(--red-d)}
-.hero{background:var(--soft);padding:56px 0}
-.hero small{color:var(--red);font-weight:700}
-.hero h1{font-size:clamp(28px,5vw,44px);line-height:1.3;margin:8px 0 20px}
-.ph{background:#d9d9d9;color:#888;display:flex;align-items:center;justify-content:center;font-size:15px}
-section{padding:56px 0}
-h2{font-size:clamp(24px,4vw,32px);margin:0 0 6px}
-.lead{color:var(--mute);margin:0 0 24px}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
-.chip{border:1px solid #ccc;background:#fff;border-radius:999px;padding:8px 18px;font:inherit;font-size:15px;cursor:pointer}
-.chip.on{background:var(--red);border-color:var(--red);color:#fff;font-weight:700}
-.cards{display:grid;gap:28px 20px;grid-template-columns:repeat(3,1fr)}
-.card .ph{aspect-ratio:4/3;border-radius:12px;margin-bottom:10px}
-.card h3{margin:0;font-size:18px}
-.card p{margin:2px 0 0;color:var(--mute);font-size:14px}
-.card[hidden]{display:none}
-.alt{background:var(--soft)}
-.steps{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
-.step{background:#fff;border-radius:16px;padding:24px;border-top:4px solid var(--red)}
-.step b{color:var(--red);font-size:14px}
-.step h3{margin:4px 0 8px;font-size:20px}
-form{display:grid;gap:14px;max-width:560px}
-label{font-weight:700;font-size:16px}
-input,textarea{width:100%;padding:12px;border:1px solid #bbb;border-radius:10px;font:inherit;margin-top:4px;background:#fff}
-input:focus,textarea:focus{outline:2px solid var(--red);border-color:var(--red)}
+html{scroll-behavior:smooth;scroll-padding-top:140px}
+body{margin:0;font-family:"Pretendard Variable",Pretendard,"Apple SD Gothic Neo","맑은 고딕","Malgun Gothic",sans-serif;color:var(--txt);background:#fff;font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+img{display:block}
+:focus-visible{outline:2px solid var(--link);outline-offset:2px}
+.c{max-width:var(--c);margin:0 auto;padding:0 20px}
+.sr{position:absolute;left:-9999px}
+
+/* 상단 띠 */
+.band{background:#111;color:#fff;text-align:center;font-size:14px;font-weight:600;height:46px;line-height:46px}
+.band b{color:var(--blue);font-weight:800}
+
+/* 헤더 */
+header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 1px 0 var(--line)}
+.h1{display:flex;align-items:center;height:81px;gap:34px}
+.logo{display:flex;align-items:center;gap:8px;font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+.logo i{width:30px;height:30px;border-radius:8px;background:var(--blue);display:inline-block;position:relative}
+.logo i::after{content:"";position:absolute;left:8px;top:8px;width:14px;height:14px;background:#fff;clip-path:polygon(50% 0,100% 40%,85% 40%,85% 100%,15% 100%,15% 40%,0 40%)}
+.gnb{display:flex;gap:28px}
+.gnb a{font-size:18px;font-weight:700;color:var(--ink);padding:8px 0}
+.gnb a.on{color:var(--link)}
+.search{margin-left:auto;display:flex;align-items:center;width:340px;height:40px;border:1px solid #dadfe3;border-radius:4px;background:#f7f9fa;padding:0 12px;gap:8px;color:var(--mute)}
+.search input{flex:1;border:0;background:none;font:inherit;font-size:14px;outline:0;color:var(--ink)}
+.util{display:flex;align-items:center;gap:18px;font-size:14px;color:var(--ink);white-space:nowrap}
+.util .b{height:40px;padding:0 16px;border-radius:4px;background:var(--blue);color:#fff;font-weight:600;display:inline-flex;align-items:center}
+.util .b:hover{background:var(--blue-d)}
+.sub{display:flex;gap:26px;height:48px;align-items:stretch;overflow-x:auto;scrollbar-width:none}
+.sub::-webkit-scrollbar{display:none}
+.sub a{display:flex;align-items:center;font-size:16px;font-weight:500;color:var(--ink);border-bottom:2px solid transparent;white-space:nowrap}
+.sub a.on{color:var(--ink);font-weight:700;border-color:var(--ink)}
+
+/* 첫 화면 큰 카드 */
+.hero{display:grid;grid-template-columns:1fr 285px;gap:12px;margin-top:20px}
+.big{position:relative;display:grid;grid-template-columns:1.2fr 1fr .9fr;gap:4px;border-radius:12px;overflow:hidden;height:420px;background:#eee}
+.big img{width:100%;height:100%;object-fit:cover}
+.big .cap{position:absolute;left:0;right:0;bottom:0;padding:70px 28px 24px;background:linear-gradient(transparent,rgba(0,0,0,.65));color:#fff}
+.big .cap b{display:block;font-size:24px;font-weight:700;line-height:1.3;margin-bottom:6px}
+.big .cap span{font-size:14px;opacity:.9}
+.big .pg{position:absolute;right:16px;bottom:16px;background:rgba(0,0,0,.45);color:#fff;font-size:12px;border-radius:12px;padding:2px 10px}
+.ad{border-radius:12px;overflow:hidden;background:#f0f4f6;position:relative;display:flex;flex-direction:column;justify-content:center;padding:24px;text-align:center}
+.ad img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.ad div{position:relative;font-size:20px;font-weight:700;color:var(--ink);line-height:1.35}
+.ad small{position:relative;display:block;color:var(--mute);font-size:13px;margin-top:8px}
+.ad em{position:absolute;left:12px;top:10px;font-style:normal;font-size:11px;background:rgba(0,0,0,.4);color:#fff;border-radius:3px;padding:1px 6px}
+
+/* 아이콘 줄 */
+.icons{display:grid;grid-template-columns:repeat(8,1fr);gap:8px;margin:24px 0 40px}
+.icons a{display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px 4px;border-radius:12px;font-size:13px;color:var(--ink);transition:background .15s}
+.icons a:hover{background:var(--bg2)}
+.icons i{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-size:22px;font-style:normal;background:#eef7fb}
+
+/* 섹션 공통 */
+section{padding:28px 0 36px}
+.sh{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px}
+.sh h2{font-size:20px;font-weight:700;color:var(--ink);margin:0}
+.sh p{margin:4px 0 0;color:var(--mute);font-size:14px}
+.sh a{font-size:14px;color:var(--mute)}
+.om{font-size:13px;font-weight:700;color:var(--blue);letter-spacing:.1em}
+.om b{color:var(--ink);font-size:16px;margin-left:8px;letter-spacing:.06em}
+
+/* 사진 카드 격자 */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px 16px}
+.card{min-width:0}
+.card .th{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:4/3;background:#eee}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.card:hover img{transform:scale(1.03)}
+.card .bm{position:absolute;right:10px;top:10px;width:30px;height:30px;border-radius:50%;background:rgba(0,0,0,.35);color:#fff;display:grid;place-items:center;font-size:14px}
+.card h3{margin:10px 0 2px;font-size:15px;font-weight:500;color:var(--ink);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card .m{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--mute)}
+.card .m .av{width:18px;height:18px;border-radius:50%;background:#d9e3e8;display:inline-block}
+.card .m .r{font-size:11px;font-weight:700;border-radius:3px;padding:0 5px;background:#e9f7fc;color:var(--blue-d)}
+.card .m .r.o{background:#fff2e5;color:#e8711a}
+.tabs{display:flex;gap:8px;margin-bottom:16px}
+.tabs button{border:1px solid #dadfe3;background:#fff;border-radius:999px;padding:7px 14px;font-size:14px;color:var(--ink)}
+.tabs button.on{background:var(--ink);border-color:var(--ink);color:#fff;font-weight:600}
+.empty{grid-column:1/-1;background:var(--bg2);border-radius:8px;padding:40px;text-align:center;color:var(--mute)}
+.skel{aspect-ratio:4/3;border-radius:4px;background:linear-gradient(90deg,#eef1f3 25%,#f7f9fa 50%,#eef1f3 75%);background-size:200% 100%;animation:sh 1.2s linear infinite}
+@keyframes sh{to{background-position:-200% 0}}
+
+/* 오피스메이트식: 01 서비스 */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.svc div{border:1px solid var(--line);border-radius:8px;padding:28px 22px;display:flex;flex-direction:column;gap:8px;min-height:230px}
+.svc h3{margin:0;font-size:18px;color:var(--ink)}
+.svc p{margin:0;color:var(--mute);font-size:14px;flex:1}
+.svc a{align-self:flex-start;border:1px solid var(--ink);border-radius:4px;padding:8px 14px;font-size:13px;font-weight:600;color:var(--ink)}
+.svc a:hover{background:var(--ink);color:#fff}
+/* 02 실시간 견적문의 */
+.orders{border-top:2px solid var(--ink)}
+.orders div{display:grid;grid-template-columns:70px 120px 1fr 100px 80px;gap:12px;padding:14px 8px;border-bottom:1px solid var(--line);font-size:14px;align-items:center}
+.orders .t{color:var(--ink)}
+.orders .s{text-align:center;font-size:12px;font-weight:700;color:var(--blue-d);background:#e9f7fc;border-radius:3px;padding:3px 0}
+.orders .s.w{color:#e8711a;background:#fff2e5}
+.orders .d,.orders .g{color:var(--mute)}
+.count{margin-top:12px;font-size:14px;color:var(--mute)}
+.count b{color:var(--ink);font-size:18px}
+/* 03 후기 */
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rev div{background:var(--bg2);border-radius:8px;padding:24px}
+.rev q{display:block;font-size:17px;font-weight:700;color:var(--ink);quotes:"“" "”";margin-bottom:10px}
+.rev p{margin:0 0 14px;font-size:14px;color:var(--txt)}
+.rev small{color:var(--mute)}
+
+/* 양식 */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+form{display:grid;gap:14px}
+label{font-size:14px;font-weight:600;color:var(--ink)}
+input,textarea,select{width:100%;padding:11px 12px;border:1px solid #dadfe3;border-radius:4px;font:inherit;font-size:14px;margin-top:6px;background:#fff}
+input:focus,textarea:focus,select:focus{outline:0;border-color:var(--blue);box-shadow:0 0 0 3px rgba(53,197,240,.2)}
+.btn{height:48px;border:0;border-radius:4px;background:var(--blue);color:#fff;font-size:16px;font-weight:600}
+.btn:hover{background:var(--blue-d)}
+.btn:disabled{opacity:.6;cursor:wait}
+.msg{font-weight:600;min-height:1.5em;font-size:14px}
+.note{margin:0;font-size:13px;color:var(--mute)}
+#prev{max-width:100%;max-height:200px;border-radius:4px;display:none}
 .hp{position:absolute;left:-9999px}
-#msg{font-weight:700;min-height:1.5em}
-footer{background:#222;color:#ddd;padding:40px 0 100px;text-align:center;font-size:15px}
-footer a{color:#fff}
-.fab{position:fixed;right:16px;bottom:20px;background:var(--red);color:#fff;padding:14px 22px;border-radius:999px;font-weight:800;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.3);z-index:20}
+
+footer{border-top:1px solid var(--line);padding:40px 0 110px;font-size:13px;color:var(--mute);margin-top:30px}
+footer b{color:var(--ink);font-size:15px}
+footer p{margin:6px 0}
+footer details{margin-top:12px;max-width:50em}
+footer summary{cursor:pointer;color:var(--ink)}
+.fab{position:fixed;right:24px;bottom:24px;z-index:40;background:var(--blue);color:#fff;font-weight:700;font-size:15px;padding:14px 22px;border-radius:999px;box-shadow:0 6px 16px rgba(0,0,0,.2)}
 .tabbar{display:none}
+.credit{font-size:12px;color:#aab4ba;margin-top:10px}
+
+@media(max-width:1024px){.grid,.svc{grid-template-columns:repeat(3,1fr)}.icons{grid-template-columns:repeat(4,1fr)}.hero{grid-template-columns:1fr}.ad{min-height:120px}.rev{grid-template-columns:1fr}.two{grid-template-columns:1fr}}
 @media(max-width:720px){
- nav{display:none}
- .cards,.steps{grid-template-columns:1fr}
- .cards{grid-template-columns:1fr 1fr;gap:20px 12px}
- .card h3{font-size:15px}
- .hero{padding:36px 0}section{padding:44px 0}
- .fab{bottom:76px}
- .tabbar{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);z-index:15}
- .tabbar a{text-align:center;padding:10px 0;font-size:13px;font-weight:600;text-decoration:none;color:var(--mute)}
- .tabbar span{display:block;font-size:20px;line-height:1.2}
- footer{padding-bottom:120px}
+  .band{font-size:12px;height:38px;line-height:38px}
+  .h1{height:56px;gap:16px}.gnb{display:none}.search{display:none}.util span{display:none}
+  .sub{height:44px;gap:18px}.sub a{font-size:15px}
+  .big{height:300px;grid-template-columns:1fr 1fr}.big img:nth-child(3){display:none}.big .cap{padding:50px 16px 16px}.big .cap b{font-size:18px}
+  .icons{gap:4px;margin:16px 0 20px}.icons a{font-size:12px;padding:8px 2px}.icons i{width:42px;height:42px;font-size:19px}
+  section{padding:20px 0 24px}
+  .grid,.svc{grid-template-columns:1fr 1fr;gap:16px 10px}.svc div{min-height:0;padding:18px 14px}
+  .orders div{grid-template-columns:50px 1fr 70px;font-size:13px}.orders .g,.orders .d{display:none}
+  .fab{bottom:72px;right:14px;padding:12px 18px;font-size:14px}
+  .tabbar{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);z-index:45;padding-bottom:env(safe-area-inset-bottom)}
+  .tabbar a{text-align:center;padding:8px 0 6px;font-size:11px;color:var(--mute)}
+  .tabbar a.on{color:var(--ink);font-weight:700}
+  .tabbar span{display:block;font-size:20px;line-height:1.3}
+  footer{padding-bottom:140px}
 }
 </style>
 </head>
 <body>
-<header><div class="wrap">
-  <a class="logo" href="#">에피팩스3</a>
-  <nav><a href="#work">시공사례</a><a href="#about">소개</a><a href="#service">진행 순서</a><a href="#contact">상담</a><a href="tel:010-2503-0000">010-2503-0000</a></nav>
-</div></header>
+<div class="band">첫 상담은 <b>무료</b>, 상담부터 시공까지 에피팩스3가 해결해드립니다 &rsaquo;</div>
 
-<div class="hero"><div class="wrap">
-  <small>인테리어 시공</small>
-  <h1>복잡한 인테리어,<br>상담부터 시공까지<br>저희가 해결해드립니다.</h1>
-  <a class="btn" href="#contact">견적 신청하기</a>
-</div></div>
-
-<section id="work"><div class="wrap">
-  <h2>시공사례</h2>
-  <p class="lead">(입력 필요: 실제 시공 사진과 정보를 넣으면 이곳에 보입니다)</p>
-  <div class="chips" id="chips">
-    <button class="chip on" data-c="all">전체</button>
-    <button class="chip" data-c="apt">아파트</button>
-    <button class="chip" data-c="villa">빌라·주택</button>
-    <button class="chip" data-c="shop">상가·사무실</button>
+<header>
+  <div class="c h1">
+    <a class="logo" href="#top"><i></i>에피팩스3</a>
+    <nav class="gnb"><a class="on" href="#community">집구경</a><a href="#service">시공</a><a href="#contact">견적</a></nav>
+    <label class="search"><span>&#128269;</span><input type="search" placeholder="아파트 인테리어 사진 검색" aria-label="검색"></label>
+    <div class="util"><span>로그인</span><span>회원가입</span><span>고객센터</span><a class="b" href="#upload">글쓰기</a></div>
   </div>
-  <div class="cards" id="cards">
-    <div class="card" data-c="apt"><div class="ph">사진 자리</div><h3>(입력 필요) 사례 제목</h3><p>(지역) · (평수) · (비용)</p></div>
-    <div class="card" data-c="apt"><div class="ph">사진 자리</div><h3>(입력 필요) 사례 제목</h3><p>(지역) · (평수) · (비용)</p></div>
-    <div class="card" data-c="villa"><div class="ph">사진 자리</div><h3>(입력 필요) 사례 제목</h3><p>(지역) · (평수) · (비용)</p></div>
-    <div class="card" data-c="villa"><div class="ph">사진 자리</div><h3>(입력 필요) 사례 제목</h3><p>(지역) · (평수) · (비용)</p></div>
-    <div class="card" data-c="shop"><div class="ph">사진 자리</div><h3>(입력 필요) 사례 제목</h3><p>(지역) · (평수) · (비용)</p></div>
-    <div class="card" data-c="shop"><div class="ph">사진 자리</div><h3>(입력 필요) 사례 제목</h3><p>(지역) · (평수) · (비용)</p></div>
+  <nav class="c sub"><a class="on" href="#top">홈</a><a href="#community">추천</a><a href="#community">집들이</a><a href="#community">집사진</a><a href="#upload">커뮤니티</a><a href="#service">인테리어시공</a></nav>
+</header>
+
+<main id="top" class="c">
+  <div class="hero">
+    <a class="big" href="#community">
+      <img src="img/01_living.jpg" alt="거실 인테리어 예시"><img src="img/04_living.jpg" alt="거실 인테리어 예시"><img src="img/10_bed.jpg" alt="침실 인테리어 예시">
+      <div class="cap"><b>따뜻한 우드톤으로 완성한 30평대 거실 리모델링</b><span>에피팩스3 · 예시 사진</span></div>
+      <span class="pg">1 / 4</span>
+    </a>
+    <a class="ad" href="#contact"><img src="img/06_kitchen.jpg" alt=""><em>AD</em><div>상담부터 시공까지<br>한 번에 해결</div><small>에피팩스3 무료 상담 &rsaquo;</small></a>
   </div>
-</div></section>
 
-<section class="alt" id="about"><div class="wrap">
-  <h2>에피팩스3 소개</h2>
-  <p class="lead">에피팩스3는 인테리어 시공회사입니다. 대표가 직접 상담하고, 시공까지 책임집니다.<br>(입력 필요: 경력, 시공 지역, 강점)</p>
-</div></section>
+  <nav class="icons">
+    <a href="#community"><i>&#127968;</i>집구경</a><a href="#upload"><i>&#128247;</i>사진올리기</a><a href="#service"><i>&#128295;</i>신규인테리어</a><a href="#service"><i>&#129521;</i>부분공사</a>
+    <a href="#service"><i>&#8634;</i>원상복구</a><a href="#service"><i>&#128736;</i>유지보수</a><a href="#contact"><i>&#128203;</i>견적문의</a><a href="tel:010-2503-0000"><i>&#128222;</i>전화상담</a>
+  </nav>
 
-<section id="service"><div class="wrap">
-  <h2>진행 순서</h2>
-  <p class="lead">처음 문의부터 시공까지, 이렇게 진행됩니다.</p>
-  <div class="steps">
-    <div class="step" style="background:var(--soft)"><b>STEP 1</b><h3>상담</h3><p>원하시는 공간과 예산을 편하게 말씀해 주세요. (입력 필요)</p></div>
-    <div class="step" style="background:var(--soft)"><b>STEP 2</b><h3>설계·견적</h3><p>상담 내용을 바탕으로 계획과 견적을 드립니다. (입력 필요)</p></div>
-    <div class="step" style="background:var(--soft)"><b>STEP 3</b><h3>시공</h3><p>약속한 일정에 맞춰 시공하고 마무리합니다. (입력 필요)</p></div>
-  </div>
-</div></section>
+  <section id="community">
+    <div class="sh"><div><h2>오늘의 추천 집들이 구경해보세요 &#128270;</h2><p>고객과 사장님이 올린 사진을 모아 보여드려요</p></div><a href="#upload">더보기 &rsaquo;</a></div>
+    <div class="tabs" id="chips"><button class="on" data-c="">전체</button><button data-c="고객">고객</button><button data-c="사장님">사장님</button></div>
+    <div class="grid" id="cards" aria-live="polite"></div>
+  </section>
 
-<section class="alt" id="contact"><div class="wrap">
-  <h2>견적·상담 신청</h2>
-  <p class="lead">남겨 주시면 빠르게 연락드리겠습니다.</p>
-  <form id="f">
-    <div><label for="name">이름 *</label><input id="name" name="name" maxlength="30" required></div>
-    <div><label for="phone">연락처 *</label><input id="phone" name="phone" type="tel" maxlength="20" placeholder="010-0000-0000" required></div>
-    <div><label for="body">문의 내용</label><textarea id="body" name="body" rows="5" maxlength="1000"></textarea></div>
-    <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-    <button class="btn" type="submit">견적 신청 보내기</button>
-    <div id="msg" role="status"></div>
-  </form>
-</div></section>
+  <section id="samples">
+    <div class="sh"><div><h2>이런 사진 찾고 있나요?</h2><p>공간별 인테리어 예시</p></div></div>
+    <div class="grid">
+      <div class="card"><div class="th"><img src="img/02_living.jpg" alt="거실 예시"><span class="bm">&#9734;</span></div><h3>미니멀에 따뜻함을 더한 거실</h3><div class="m"><span class="av"></span>예시 사진 · 거실</div></div>
+      <div class="card"><div class="th"><img src="img/05_kitchen.jpg" alt="주방 예시"><span class="bm">&#9734;</span></div><h3>화이트 타일과 우드 선반의 주방</h3><div class="m"><span class="av"></span>예시 사진 · 주방</div></div>
+      <div class="card"><div class="th"><img src="img/08_bath.jpg" alt="욕실 예시"><span class="bm">&#9734;</span></div><h3>유리 부스로 넓어 보이는 욕실</h3><div class="m"><span class="av"></span>예시 사진 · 욕실</div></div>
+      <div class="card"><div class="th"><img src="img/11_bed.jpg" alt="침실 예시"><span class="bm">&#9734;</span></div><h3>차분한 톤으로 정리한 침실</h3><div class="m"><span class="av"></span>예시 사진 · 침실</div></div>
+      <div class="card"><div class="th"><img src="img/03_living.jpg" alt="거실 예시"><span class="bm">&#9734;</span></div><h3>채광이 좋은 거실 소파 배치</h3><div class="m"><span class="av"></span>예시 사진 · 거실</div></div>
+      <div class="card"><div class="th"><img src="img/07_kitchen.jpg" alt="주방 예시"><span class="bm">&#9734;</span></div><h3>수납을 살린 ㄱ자 주방</h3><div class="m"><span class="av"></span>예시 사진 · 주방</div></div>
+      <div class="card"><div class="th"><img src="img/09_bath.jpg" alt="욕실 예시"><span class="bm">&#9734;</span></div><h3>밝은 조명의 세면대 공간</h3><div class="m"><span class="av"></span>예시 사진 · 욕실</div></div>
+      <div class="card"><div class="th"><img src="img/10_bed.jpg" alt="침실 예시"><span class="bm">&#9734;</span></div><h3>호텔 느낌의 침실 조명</h3><div class="m"><span class="av"></span>예시 사진 · 침실</div></div>
+    </div>
+    <p class="credit">예시 사진: Unsplash (무료 사용 허가). 실제 시공 사진으로 교체 예정</p>
+  </section>
 
-<footer><div class="wrap">
-  <p><b>에피팩스3</b></p>
-  <p>전화 <a href="tel:010-2503-0000">010-2503-0000</a> · 이메일 <a href="mailto:taesunghyuk@gmail.com">taesunghyuk@gmail.com</a></p>
-  <p>주소: (입력 필요)</p>
+  <section id="service">
+    <div class="sh"><div><div class="om">01 <b>SERVICE</b></div><h2>에피팩스3는 인테리어 시공 전문 회사입니다</h2></div></div>
+    <div class="svc">
+      <div><h3>신규 인테리어</h3><p>공간 설계부터 시공까지, 집 전체를 새로 계획합니다. (입력 필요)</p><a href="#contact">견적문의</a></div>
+      <div><h3>부분 공사</h3><p>주방, 욕실처럼 필요한 공간만 골라 공사합니다. (입력 필요)</p><a href="#contact">견적문의</a></div>
+      <div><h3>원상복구</h3><p>이사, 임대 종료로 천장·바닥을 원래대로 되돌립니다. (입력 필요)</p><a href="#contact">견적문의</a></div>
+      <div><h3>유지보수</h3><p>도배, 타일, 전기처럼 작은 보수가 필요한 곳을 고칩니다. (입력 필요)</p><a href="#contact">견적문의</a></div>
+    </div>
+  </section>
+
+  <section id="orders">
+    <div class="sh"><div><div class="om">02 <b>ORDERS</b></div><h2>실시간 견적문의</h2></div></div>
+    <div class="orders" id="orders"><div class="empty" style="border:0">불러오는 중...</div></div>
+    <p class="count" id="ocount"></p>
+  </section>
+
+  <section id="reviews">
+    <div class="sh"><div><div class="om">03 <b>REVIEWS</b></div><h2>고객님들의 리얼후기</h2></div></div>
+    <div class="rev">
+      <div><q>(입력 필요: 후기 한 줄)</q><p>(입력 필요: 후기 내용)</p><small>(현장명) | 신규 인테리어 | 고객님</small></div>
+      <div><q>(입력 필요: 후기 한 줄)</q><p>(입력 필요: 후기 내용)</p><small>(현장명) | 부분 공사 | 고객님</small></div>
+      <div><q>(입력 필요: 후기 한 줄)</q><p>(입력 필요: 후기 내용)</p><small>(현장명) | 원상복구 | 고객님</small></div>
+    </div>
+  </section>
+
+  <section id="upload">
+    <div class="two">
+      <div>
+        <div class="sh"><div><h2>사진 올리기</h2><p>고객도, 인테리어 사장님도 올릴 수 있어요. 확인 후 공개됩니다.</p></div></div>
+        <form id="pf">
+          <div><label for="img">사진 * (JPG, PNG)</label><input id="img" type="file" accept="image/jpeg,image/png" required></div>
+          <img id="prev" alt="올릴 사진 미리보기">
+          <div><label for="title">제목 *</label><input id="title" name="title" maxlength="40" required></div>
+          <div><label for="desc">설명</label><textarea id="desc" name="desc" rows="3" maxlength="300"></textarea></div>
+          <div><label for="nick">닉네임 *</label><input id="nick" name="nick" maxlength="20" required></div>
+          <div><label for="role">구분 *</label><select id="role" name="role"><option>고객</option><option>사장님</option></select></div>
+          <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <p class="note">얼굴, 연락처, 집 주소가 보이는 사진은 올리지 마세요.</p>
+          <button class="btn" type="submit" id="pbtn">사진 올리기</button>
+          <div class="msg" id="pmsg" role="status"></div>
+        </form>
+      </div>
+      <div id="contact">
+        <div class="sh"><div><h2>인테리어 견적·문의</h2><p>남겨 주시면 빠르게 연락드리겠습니다. 급하시면 <a href="tel:010-2503-0000" style="color:var(--link)">010-2503-0000</a></p></div></div>
+        <form id="f">
+          <div><label for="name">이름 *</label><input id="name" name="name" maxlength="30" autocomplete="name" required></div>
+          <div><label for="phone">연락처 *</label><input id="phone" name="phone" type="tel" maxlength="20" autocomplete="tel" placeholder="010-0000-0000" required></div>
+          <div><label for="body">문의 내용</label><textarea id="body" name="body" rows="5" maxlength="1000" placeholder="예) 서울 ○○구 아파트 32평, 주방·욕실 부분 공사 견적 문의"></textarea></div>
+          <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn" type="submit" id="fbtn">견적문의 보내기</button>
+          <div class="msg" id="msg" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="c">
+  <b>에피팩스3</b>
+  <p>대표: (입력 필요) · 전화 <a href="tel:010-2503-0000">010-2503-0000</a> · 이메일 <a href="mailto:taesunghyuk@gmail.com">taesunghyuk@gmail.com</a></p>
+  <p>주소: (입력 필요) · 사업자등록번호: (입력 필요)</p>
+  <details><summary>개인정보 처리 안내</summary><p>상담 신청에서는 이름, 연락처, 문의 내용을, 사진 올리기에서는 사진, 제목, 설명, 닉네임을 받습니다. 상담 연락과 커뮤니티 운영에만 사용합니다. 보관 기간과 삭제 요청 방법: (입력 필요)</p></details>
 </div></footer>
 
-<a class="fab" href="#contact">견적 신청</a>
-<div class="tabbar">
-  <a href="#work"><span>&#9638;</span>사례</a>
-  <a href="#about"><span>&#9432;</span>소개</a>
-  <a href="#contact"><span>&#9993;</span>상담</a>
-  <a href="tel:010-2503-0000"><span>&#9742;</span>전화</a>
-</div>
+<a class="fab" href="#contact">&#9998; 견적문의</a>
+<nav class="tabbar">
+  <a class="on" href="#top"><span>&#127968;</span>홈</a><a href="#community"><span>&#128444;</span>집구경</a><a href="#upload"><span>&#10133;</span>글쓰기</a><a href="#contact"><span>&#9993;</span>견적</a><a href="tel:010-2503-0000"><span>&#128222;</span>전화</a>
+</nav>
 
 <script>
-// 사례 걸러 보기
-document.getElementById("chips").addEventListener("click", e => {
-  const b = e.target.closest(".chip"); if (!b) return;
-  document.querySelectorAll(".chip").forEach(c => c.classList.toggle("on", c === b));
-  document.querySelectorAll("#cards .card").forEach(c => c.hidden = b.dataset.c !== "all" && c.dataset.c !== b.dataset.c);
+const URL_ = "https://script.google.com/macros/s/AKfycbzkHRBk9VqffkZ24FDRsS8XmraTpoWwicHxFNqVHITf5Bna5JZSCNVxm_N76HCLWC6n/exec"; // 구글 웹 앱 주소
+const $ = id => document.getElementById(id);
+const send = obj => fetch(URL_, {method:"POST", mode:"no-cors", body:new URLSearchParams(obj)}); // 응답은 읽을 수 없는 방식이라 보낸 뒤 안내만 한다
+const say = (el, ok, t) => { el.style.color = ok ? "#1d8a4a" : "#e0342c"; el.textContent = t; };
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; };
+
+// ---- 커뮤니티 사진 (글자는 textContent로만 넣어 스크립트 주입 차단)
+let items = [], role = "";
+function render() {
+  const box = $("cards"); box.replaceChildren();
+  const shown = items.filter(i => !role || i.role === role);
+  if (!shown.length) { box.append(el("div", "empty", items.length ? "이 구분의 사진이 아직 없습니다." : "아직 올라온 사진이 없어요. 첫 사진을 올려 보세요.")); return; }
+  for (const i of shown.slice(0, 8)) {
+    const c = el("div", "card"), th = el("div", "th"), im = el("img"), a = el("a");
+    im.loading = "lazy"; im.alt = i.title; im.src = "https://drive.google.com/thumbnail?id=" + encodeURIComponent(i.id) + "&sz=w800";
+    a.href = "https://drive.google.com/thumbnail?id=" + encodeURIComponent(i.id) + "&sz=w1600"; a.target = "_blank"; a.rel = "noopener";
+    th.append(im, el("span", "bm", "☆")); a.append(th);
+    const m = el("div", "m"); m.append(el("span", "av"), el("span", "r" + (i.role === "사장님" ? " o" : ""), i.role), document.createTextNode(i.nick + " · " + i.t));
+    c.append(a, el("h3", "", i.title), m); box.append(c);
+  }
+}
+$("chips").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  role = b.dataset.c; $("chips").querySelectorAll("button").forEach(x => x.classList.toggle("on", x === b)); render();
+});
+$("cards").replaceChildren(...[1,2,3,4].map(() => el("div", "skel")));
+fetch(URL_ + "?action=list").then(r => r.json()).then(d => { items = d; render(); })
+  .catch(() => $("cards").replaceChildren(el("div", "empty", "사진을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.")));
+
+// ---- 실시간 견적문의 (이름·연락처 없이 지역·종류·제목·날짜·상태만)
+fetch(URL_ + "?action=orders").then(r => r.json()).then(({total, list: d}) => {
+  d.total = total; const box = $("orders"); box.replaceChildren();
+  if (!d.length) { box.append(el("div", "empty", "아직 문의가 없습니다. 첫 문의를 남겨 보세요.")); return; }
+  for (const o of d) {
+    const row = el("div"); row.append(el("span", "g", o.region || "-"), el("span", "g", o.kind || "일반"), el("span", "t", o.title), el("span", "d", o.t), el("span", "s" + (o.done ? "" : " w"), o.done ? "답변완료" : "접수"));
+    box.append(row);
+  }
+  const c = $("ocount"); c.replaceChildren(el("b", "", d.total + "건"), document.createTextNode(" 에피팩스3를 통해 견적을 문의하였습니다."));
+}).catch(() => $("orders").replaceChildren(el("div", "empty", "목록을 불러오지 못했습니다.")));
+
+// ---- 사진 올리기: 올리기 전에 폰 사진을 줄여서(가로 1280px 이하 JPG) 보낸다
+function shrink(file) {
+  return new Promise((ok, no) => {
+    const im = new Image(), u = URL.createObjectURL(file);
+    im.onload = () => {
+      const s = Math.min(1, 1280 / Math.max(im.width, im.height)), cv = document.createElement("canvas");
+      cv.width = Math.round(im.width * s); cv.height = Math.round(im.height * s);
+      cv.getContext("2d").drawImage(im, 0, 0, cv.width, cv.height); URL.revokeObjectURL(u);
+      let q = 0.8, d = cv.toDataURL("image/jpeg", q);
+      while (d.length > 2000000 && q > 0.3) d = cv.toDataURL("image/jpeg", q -= 0.1);
+      d.length > 2000000 ? no() : ok(d);
+    };
+    im.onerror = no; im.src = u;
+  });
+}
+$("img").addEventListener("change", e => { const f = e.target.files[0]; $("prev").style.display = f ? "block" : "none"; if (f) $("prev").src = URL.createObjectURL(f); });
+$("pf").addEventListener("submit", async e => {
+  e.preventDefault(); const m = $("pmsg"), f = $("pf"), b = $("pbtn");
+  b.disabled = true; m.style.color = "#2f3438"; m.textContent = "사진을 보내는 중입니다. 잠시 기다려 주세요.";
+  try {
+    const img = await shrink($("img").files[0]);
+    await send({type:"photo", img, title:f.title.value, desc:f.desc.value, nick:f.nick.value, role:f.role.value, website:f.website.value});
+    say(m, true, "접수되었습니다. 확인 후 공개됩니다."); f.reset(); $("prev").style.display = "none";
+  } catch { say(m, false, "전송하지 못했습니다. 사진을 확인하고 다시 시도해 주세요."); }
+  b.disabled = false;
 });
 
-const URL_ = "https://script.google.com/macros/s/AKfycbzkHRBk9VqffkZ24FDRsS8XmraTpoWwicHxFNqVHITf5Bna5JZSCNVxm_N76HCLWC6n/exec"; // 구글 웹 앱 주소
-const f = document.getElementById("f"), msg = document.getElementById("msg");
-f.addEventListener("submit", async e => {
-  e.preventDefault();
-  msg.style.color = "#222"; msg.textContent = "보내는 중...";
+// ---- 견적 문의
+$("f").addEventListener("submit", async e => {
+  e.preventDefault(); const m = $("msg"), f = $("f"), b = $("fbtn");
+  b.disabled = true; m.style.color = "#2f3438"; m.textContent = "보내는 중입니다.";
   try {
-    // 응답은 읽을 수 없는 방식(no-cors)이라, 보낸 뒤 완료 안내만 한다
-    await fetch(URL_, {method:"POST", mode:"no-cors", body:new URLSearchParams(new FormData(f))});
-    msg.style.color = "#0a7a2f"; msg.textContent = "접수되었습니다. 곧 연락드리겠습니다.";
-    f.reset();
-  } catch {
-    msg.style.color = "#c8102e"; msg.textContent = "전송에 실패했습니다. 전화로 문의해 주세요: 010-2503-0000";
-  }
+    await send({name:f.name.value, phone:f.phone.value, body:f.body.value, website:f.website.value});
+    say(m, true, "접수되었습니다. 곧 연락드리겠습니다."); f.reset();
+  } catch { say(m, false, "전송하지 못했습니다. 전화로 문의해 주세요: 010-2503-0000"); }
+  b.disabled = false;
 });
 </script>
 </body>
